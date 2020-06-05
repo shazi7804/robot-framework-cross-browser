@@ -245,5 +245,6 @@ $RECYCLE.BIN/
 log.html
 output.xml
 report.html
-
+selenium-screenshot*.png
+*.log
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
