@@ -1,4 +1,6 @@
 language: python
+python:
+- 3.6
 matrix:
   fast_finish: true
   include:
@@ -6,8 +8,9 @@ matrix:
   - env: BROWSER="Chrome" WEB_DRIVER="chrome"
   - env: BROWSER="Opera" WEB_DRIVER="opera"
 before_install:
+  - pip install poetry ${WEB_DRIVER} --linkpath /usr/local/bin
+install:
   - poetry install
-  - pip install ${WEB_DRIVER} --linkpath /usr/local/bin
 script:
   - robot --variable browser:${BROWSER} test_shazi.info.robot
 notifications:
