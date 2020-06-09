@@ -12,7 +12,7 @@ before_install:
 install:
   - poetry install
   - mkdir bin && PATH=$PATH:`pwd`/bin/
-  - webdrivermanager install ${WEB_DRIVER} bin/
+  - webdrivermanager install ${WEB_DRIVER} --linkpath `pwd`/bin/
 script:
   - robot --variable browser:${BROWSER} test_shazi.info.robot
 notifications:
