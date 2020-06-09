@@ -11,7 +11,8 @@ before_install:
   - pip install poetry
 install:
   - poetry install
-  - webdrivermanager ${WEB_DRIVER}
+  - mkdir bin && PATH=$PATH:`pwd`/bin/
+  - webdrivermanager install ${WEB_DRIVER} bin/
 script:
   - robot --variable browser:${BROWSER} test_shazi.info.robot
 notifications:
