@@ -1,6 +1,12 @@
 language: python
 python:
 - 3.6
+dist: xenial
+addons:
+  chrome: stable
+  firefox: latest
+services:
+  - xvfb
 matrix:
   fast_finish: true
   include:
