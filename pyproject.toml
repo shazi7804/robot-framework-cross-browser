@@ -11,6 +11,7 @@ requests = { version = "^2.23.0", extras = [ "security" ] }
 selenium = "^3.141.0"
 robotframework = "^3.2.1"
 robotframework-seleniumlibrary = "^4.4.0"
+webdrivermanager = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4"

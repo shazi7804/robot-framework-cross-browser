@@ -12,8 +12,7 @@ poetry install
 ## Install Browser drivers
 
 ```
-pip install
-webdrivermanager firefox chrome opera --linkpath /usr/local/bin
+webdrivermanager install firefox chrome opera --linkpath /usr/local/bin
 ```
 
 ## Multiple process of Make Jobs

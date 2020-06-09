@@ -8,9 +8,10 @@ matrix:
   - env: BROWSER="Chrome" WEB_DRIVER="chrome"
   - env: BROWSER="Opera" WEB_DRIVER="opera"
 before_install:
-  - pip install poetry ${WEB_DRIVER} --linkpath /usr/local/bin
+  - pip install poetry
 install:
   - poetry install
+  - webdrivermanager ${WEB_DRIVER} --linkpath /usr/local/bin
 script:
   - robot --variable browser:${BROWSER} test_shazi.info.robot
 notifications:
